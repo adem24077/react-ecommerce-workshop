@@ -19,8 +19,8 @@ export default function ProductDetail() {
     <div className="container mt-10">
       <div className="row">
         <h3>Ürün Detayları</h3>
+        <img src={product.thumbnail} className="rounded" alt="..." />
         <div className="card" styleName={"width:18 rem"}>
-          <img src={product.thumbnail} className="card-img-top" alt="..." />
           <ul className="list-group list-group-flush">
             <li className="list-group-item">Ürün id: {id}</li>
             <li className="list-group-item">Ürün Adı: {product.title}</li>
