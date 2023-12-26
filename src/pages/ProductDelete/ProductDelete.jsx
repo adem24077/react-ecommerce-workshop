@@ -1,15 +1,14 @@
-import React, { useEffect } from "react";
+import React from "react";
 
 export default function ProductDelete() {
-  useEffect(() => {
-    const fetchProduct = async () => {
-      fetch("https://dummyjson.com/products/1", {
-        method: "DELETE",
-      })
-        .then((res) => res.json())
-        .then(console.log);
-    };
-  }, []);
+  const id = prompt("Ürün id");
+  fetch(`https://dummyjson.com/products/${id}`, {
+    method: "DELETE",
+  })
+    .then((res) => res.json())
+    .then((data) => {
+      console.log(data);
+    });
 
   return <div>Ürün Silindi.</div>;
 }
